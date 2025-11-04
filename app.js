@@ -1,18 +1,7 @@
 import express from "express";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
 
 const app = express();
 
-// Boilerplate to get __dirname in ES Modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Read employees.json
-const employees = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "data/employees.json"), "utf-8")
-);
 
 // 1️⃣ GET /
 app.get("/", (req, res) => {
