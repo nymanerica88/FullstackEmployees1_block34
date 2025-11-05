@@ -1,3 +1,4 @@
+import 'dotenv/config'; // auto loads .env -- tells Node to load .env before anything else runs
 import app from "#app";
 import db from "#db/client";
 
